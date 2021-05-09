@@ -7,6 +7,7 @@ for (i = 0; i < document.querySelectorAll(".drum").length; i++) {
 function handleClick() {
   var buttonInnerHTML = this.innerHTML;
   makeSound(buttonInnerHTML);
+  displayAnimation(buttonInnerHTML);
 }
 
 //Detects button press on keyboard key stroke.
@@ -15,6 +16,7 @@ document.addEventListener("keypress", handleKeyboardClick);
 function handleKeyboardClick(event) {
   var keyPress = event.key;
   makeSound(keyPress);
+  displayAnimation(keypress);
 }
 
 //Function to make sound.
@@ -59,3 +61,14 @@ function makeSound(key) {
       console.log("I don't know about nomenclature of errors, so I'll say, 'Error.'");
   }
 }l
+
+//Function to change add css class (which includes properties to change the opacity and colour of the button.)
+function displayAnimation(activeKey){
+  var activeButton = document.querySelector('.' + activeKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function() {
+    activeButton.classList.remove("pressed");
+  }, 100)
+}
