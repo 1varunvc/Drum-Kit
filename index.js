@@ -60,7 +60,7 @@ function makeSound(key) {
     default:
       console.log("I don't know about nomenclature of errors, so I'll say, 'Error.'");
   }
-}l
+}
 
 //Function to change add css class (which includes properties to change the opacity and colour of the button.)
 function displayAnimation(activeKey){
