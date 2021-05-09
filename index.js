@@ -16,7 +16,7 @@ document.addEventListener("keypress", handleKeyboardClick);
 function handleKeyboardClick(event) {
   var keyPress = event.key;
   makeSound(keyPress);
-  displayAnimation(keypress);
+  displayAnimation(keyPress);
 }
 
 //Function to make sound.
